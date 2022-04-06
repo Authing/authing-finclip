@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/main/index/index",
+    "pages/main/userInfo/index/index",
+    "pages/main/getToken/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Authing-FinClip-SDK",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

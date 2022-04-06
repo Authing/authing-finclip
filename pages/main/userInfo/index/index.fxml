@@ -1,0 +1,14 @@
+<view class='container'>
+  <view class='text-content'>
+          <view class='titleView'><text class='itemText'>头像</text></view>
+          <image class="imageView" src="{{imageUrl}}" mode="aspectFill"></image>
+  </view> 
+  <block wx:for="{{userInfoTitles}}" wx:key="index">
+    <view class='text-content'>
+        <view class='titleView'><text class='itemText'>{{item}}</text></view>
+        <view class='itemView'><text class='itemText'>{{userInfoItems[index]}}</text></view>
+    </view> 
+  </block>
+
+
+</view>
