@@ -18,22 +18,63 @@ Page({
   methods: {
     async handleRegisterByEmail(){
         let register = await app.guard.registerByEmail('123@.com','123456');
-        console.log(register);
         ft.guardRequest({
           url: register.url,
           body: register.body,
           method: register.method,
           success: function (res) {
             console.log("registerByEmail success");
-            wx.hideToast();
           },
           fail: function (res) {
             console.log("registerByEmail fail");
-            console.log(JSON.stringify(res["errMsg"]));
-            wx.hideToast();
+          console.log(res.errMsg);
           }
         });
-    }
+    },
+
+    getCurrentUser(){
+      let getUser = app.guard.getCurrentUser();
+      ft.guardRequest({
+        url: getUser.url,
+        body: getUser.body,
+        method: getUser.method,
+        success: function (res) {
+          _this.setData({
+            imageUrl:res.data.photo,
+            userInfoItems:[
+              res.data.username,
+              res.data.id,
+              res.data.email,
+              res.data.phone,
+              res.data.token
+            ]
+          })
+
+          console.log("getCurrentUser success");
+        },
+        fail: function (res) {
+          console.log("getCurrentUser fail");
+          console.log(res.errMsg);
+        }
+      });
+    },
+
+    setCustomUserData(){
+      let customData = app.guard.setCustomUserData({'name':'123','sex':'456'});
+      ft.guardRequest({
+        url: customData.url,
+        body: customData.body,
+        method: customData.method,
+        success: function (res) {
+          console.log("setCustomUserData success");
+        },
+        fail: function (res) {
+          console.log("setCustomUserData fail");
+          console.log(res.errMsg);
+        }
+      });
+    },
+
   },
 
 
@@ -41,61 +82,11 @@ Page({
 
     var _this = this
 
-    wx.showToast({title: '加载中', icon: 'loading', duration: 10000});
+    this.methods.getCurrentUser();
 
-    // let getUser = app.guard.getCurrentUser();
-    // ft.guardRequest({
-    //   url: getUser.url,
-    //   body: getUser.body,
-    //   method: getUser.method,
-    //   success: function (res) {
-    //     _this.setData({
-    //       imageUrl:res.photo,
-    //       userInfoItems:[
-    //         res.username,
-    //         res.id,
-    //         res.email,
-    //         res.phone,
-    //         res.token
-    //       ]
-    //     })
+    this.methods.handleRegisterByEmail();
 
-    //     console.log("getCurrentUser success");
-    //     wx.hideToast();
-    //   },
-    //   fail: function (res) {
-    //     console.log("getCurrentUser fail");
-    //     console.log(JSON.stringify(res["errMsg"]));
-    //     wx.hideToast();
-    //   }
-    // });
-
-
-    this.methods.handleRegisterByEmail()
-
-  
- 
-
-    // ft.getCurrentUser({
-    // success: function (res) {
-    //     _this.setData({
-    //       imageUrl:res.photo,
-    //       userInfoItems:[
-    //         res.username,
-    //         res.userId,
-    //         res.email,
-    //         res.phone,
-    //         res.token
-    //       ]
-    //     })
-    //     console.log("调用getCurrentUser success");
-    //     console.log(JSON.stringify(res));
-    // },
-    // fail: function (res) {
-    //     console.log("调用getCurrentUser fail");
-    //     console.log(JSON.stringify(res["errMsg"]));
-    // }
-    // })
+    this.methods.setCustomUserData();
 
   },
   
