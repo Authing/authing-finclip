@@ -29,6 +29,8 @@ page{
   }
 
   .title_button{
+    width: 100%;
+    height: 100%;
     background-color: white;
     color: #999999;  
     border-radius: 98rpx;

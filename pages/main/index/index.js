@@ -15,7 +15,7 @@ Page({
 
     if (value == 0) {
      wx.navigateTo({url: '../userInfo/index/index'});
-    }else{
+    }else if (value  == 1){
      wx.navigateTo({url: '../getToken/index/index'});
     }
   },
