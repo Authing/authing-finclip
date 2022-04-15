@@ -443,7 +443,6 @@ async function encryptPassword(password){
   })
 }
 
-
 module.exports = {
   registerByEmail,
   registerByUserName,

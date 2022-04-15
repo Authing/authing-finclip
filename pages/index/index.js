@@ -13,6 +13,7 @@ Page({
     })
   },
   onLoad() {
+
     this.setData({
       motto: 'guard'
     })
