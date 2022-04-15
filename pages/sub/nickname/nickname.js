@@ -33,8 +33,28 @@ Page({
   },
   // 提交
   submit() {
-    var inputValue = String(this.inputValue);
+    var inputValue = String(this.data.inputValue);
 
-    //TODO   /api/v2/users/profile/update   nickname
+    var _this = this;
+    wx.showLoading({title: '提交中', duration: 10000});
+      
+    let nickName = app.guard.updateProfile({nickname: inputValue});
+    console.log(nickName);
+    ft.guardRequest({
+      url: nickName.url,
+      body: nickName.body,
+      method: nickName.method,
+      success: function (res) {
+        wx.hideLoading();
+        wx.showToast({title: '提交成功'});
+        console.log("updateProfile success");
+      },
+      fail: function (res) {        
+        wx.hideLoading();
+        wx.showToast({title: '提交失败', icon: 'error'});
+        console.log("updateProfile fail");
+        console.log(res.errMsg);
+      }
+    });
   }
 })

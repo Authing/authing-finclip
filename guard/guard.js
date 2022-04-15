@@ -270,7 +270,7 @@ function updateProfile(object){
   return {
     url: '/api/v2/users/profile/update',
     method: 'POST',
-    body: {object: object}
+    body: object
   }
 }
 
