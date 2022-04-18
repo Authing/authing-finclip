@@ -444,34 +444,34 @@ async function encryptPassword(password){
 }
 
 module.exports = {
-  registerByEmail,
-  registerByUserName,
-  loginByAccount,
-  loginByPhoneCode,
-  loginByEmail,
-  loginByLDAP,
-  loginByAD,
-  getCurrentUser,
-  logout,
-  sendSms,
-  sendLoginEmail,
-  sendResetPasswordEmail,
-  sendMFAEmail,
-  getCustomUserData,
-  setCustomUserData,
-  resetPasswordByPhone,
-  resetPasswordByEmail,
-  resetPasswordByFirstTimeLoginToken,
-  updateProfile,
-  updatePassword,
-  bindPhone,
-  unbindPhone,
-  bindEmail,
-  unbindEmail,
-  updateIdToken,
-  getSecurityLevel,
-  listApplications,
-  listOrgs,
-  listRoles,
-  deleteAccount
+  registerByEmail,        //邮箱注册
+  registerByUserName,     //用户名注册
+  loginByAccount,         //账户登录
+  loginByPhoneCode,       //手机号登录
+  loginByEmail,           //邮箱登录
+  loginByLDAP,            //LDAP 登录
+  loginByAD,              //AD 登录
+  getCurrentUser,         //获取用户信息
+  logout,                 //退出登录
+  sendSms,                //发送验证码
+  sendLoginEmail,         //邮箱登录验证码
+  sendResetPasswordEmail, //重置密码邮箱验证码
+  sendMFAEmail,           //MFA 邮件验证码
+  getCustomUserData,      //获取自定义数据
+  setCustomUserData,      //设置自定义数据
+  resetPasswordByPhone,   //手机号重置密码
+  resetPasswordByEmail,   //邮箱重置密码
+  resetPasswordByFirstTimeLoginToken,   //Token 重置密码
+  updateProfile,          //更新资料
+  updatePassword,         //更新密码
+  bindPhone,              //绑定手机号
+  unbindPhone,            //解绑手机号
+  bindEmail,              //绑定邮箱
+  unbindEmail,            //解绑邮箱
+  updateIdToken,          //更新 IdToken
+  getSecurityLevel,       //获取安全等级
+  listApplications,       //获取当前用户能够访问的应用
+  listOrgs,               //获取用户所在组织机构
+  listRoles,              //获取角色
+  deleteAccount           //删除账户
 }

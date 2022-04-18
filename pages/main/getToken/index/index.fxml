@@ -1,8 +1,0 @@
-<view class='container'>
-  <block wx:for="{{userInfoTitles}}" wx:key="index">
-    <view class='text-content'>
-        <view class='titleView'><text class='itemText'>{{item}}</text></view>
-        <view class='itemView'><text class='itemText'>{{userInfoItems[index]}}</text></view>
-    </view> 
-  </block>
-</view>
