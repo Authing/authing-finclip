@@ -282,11 +282,12 @@ function updateProfile(object){
 async function updatePassword(newPassword, oldPassword){
 
   const data = await encryptPassword(newPassword);
+  const data2 = await encryptPassword(oldPassword);
 
   return {
     url: '/api/v2/password/update',
     method: 'POST',
-    body: {newPassword: newPassword, oldPassword: oldPassword}
+    body: {newPassword: data['password'], oldPassword: data2['password']}
   }
 }
 

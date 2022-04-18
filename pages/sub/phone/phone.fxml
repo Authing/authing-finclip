@@ -1,15 +1,29 @@
-<!--nickname.ftml-->
+<!--phone.ftml-->
 <view class="container">
 
     <view class='content'>
-        <view>
-           <input class="input" auto-focus  maxlength="10"
-                 bindinput="bindKeyInput" placeholder="{{name}}"/>
+
+        <view wx:if="{{phone}}">
+            <view>
+                <input class="input" auto-focus disabled='true' placeholder="{{phone}}"/>
+            </view>
+            <button style='background-color:#396aff;margin-top: 50px' type="primary" bindtap="unbindPhone">解绑</button>
         </view>
 
-        <view >
-            <button style='background-color:#396aff;margin-top: 50px' type="primary" bindtap="submit">提交</button>
+        <view wx:else>
+            <view>
+                <input class="input" auto-focus  maxlength="11" 
+                        bindinput="bindKeyInput" placeholder="请输入手机号"/>
+                <button style='background-color:#396aff;margin-top: 40px' type="primary" bindtap="sendSms">发送验证码</button>
+            </view>
+            <view style='margin-top: 50px'>
+                <input class="input"  maxlength="11"
+                        bindinput="bindKeyInput2" placeholder="请输入验证码"/>
+                
+            </view>
+            <button style='background-color:#396aff;margin-top: 50px' type="primary" bindtap="bindPhone">绑定</button>
         </view>
+        
     </view> 
 
 </view>
