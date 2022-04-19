@@ -297,12 +297,12 @@ async function updatePassword(newPassword, oldPassword){
   phone: 手机号
   code: 验证码
  */
-function bindPhone(phoneCountryCode, phone, code){
+function bindPhone(phoneCountryCode, phone, phoneCode){
 
   return {
     url: '/api/v2/users/phone/bind',
     method: 'POST',
-    body: {phoneCountryCode: phoneCountryCode, phone: phone, code: code}
+    body: {phoneCountryCode: phoneCountryCode, phone: phone, phoneCode: phoneCode}
   }
 }
 
@@ -323,12 +323,12 @@ function unbindPhone(){
   email: 邮箱
   code: 验证码
  */
-function bindEmail(email, code){
+function bindEmail(email, emailCode){
 
   return {
     url: '/api/v2/users/email/bind',
     method: 'POST',
-    body: {email: email, code: code}
+    body: {email: email, emailCode: emailCode}
   }
 }
 
