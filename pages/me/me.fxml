@@ -1,9 +1,11 @@
 <!--me.ftml-->
 <view class="container">
 
-  <view class='text-content'>
-    <view class='titleView'><text class='itemText' bindtap="getUserAvatar">头像</text></view>
-    <image class="imageView" src="{{photo}}" mode="aspectFill"></image>
+  <view class='logoView'>
+    <view class='text-content'>
+      <view class='titleView'><text class='itemText' bindtap="getUserAvatar">头像</text></view>
+      <image class="imageView" src="{{photo}}" mode="aspectFill"></image>
+    </view> 
   </view> 
 
 

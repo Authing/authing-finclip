@@ -7,6 +7,10 @@ page{
   padding: 10px 20px;
   align-content: center;
  }
+.logoView {
+  width: 100%;
+  height: 100%;
+}
 .text-content{
   padding: 10px;
   border-bottom: 2rpx solid #F5F5F5;
