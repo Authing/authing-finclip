@@ -87,13 +87,13 @@ Page({
       method: getUser.method,
       success: function (res) {
         _this.setData({
-            photo:res.data.nameValuePairs.photo,
+            photo:res.data.photo,
             userInfoItems:[
-              res.data.nameValuePairs.nickname,
-              res.data.nameValuePairs.name,
-              res.data.nameValuePairs.username,
-              res.data.nameValuePairs.phone,
-              res.data.nameValuePairs.email
+              res.data.nickname,
+              res.data.name,
+              res.data.username,
+              res.data.phone,
+              res.data.email
             ]
         })
 
