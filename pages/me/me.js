@@ -51,6 +51,7 @@ Page({
     }
   },
   onLoad: function () {
+      
     //this.methods.handleRegisterByEmail()
   },
   onShow() {

@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs",
     "pages/me/me",
@@ -8,13 +8,14 @@
     "pages/sub/nickname/nickname",
     "pages/sub/password/password",
     "pages/sub/phone/phone",
-    "pages/sub/username/username"
+    "pages/sub/username/username",
+    "pages/sub/wechatlogin/wechatlogin"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Authing-FinClip-SDK",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#7A7E83",
