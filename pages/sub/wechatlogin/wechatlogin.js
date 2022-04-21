@@ -5,7 +5,7 @@ Page({
     token:'',
   },
 
-  submit() {
+  login() {
     wx.login({
       timeout:10000,
       success: (result) => {

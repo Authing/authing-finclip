@@ -21,6 +21,11 @@
       </view> 
     </navigator>
   </block>
+  <navigator class = 'navigatorView' url="/pages/sub/password/password">
+    <view class='text-content'>
+      <view class='titleView2'><text>修改密码</text></view>
+    </view> 
+  </navigator>
 
   <navigator class = 'navigatorView' url="/pages/sub/wechatlogin/wechatlogin">
     <view class='text-content2'>
@@ -28,9 +33,4 @@
     </view> 
   </navigator>
 
-  <navigator class = 'navigatorView' url="/pages/sub/password/password">
-    <view class='text-content2'>
-      <view class='titleView2'><text>修改密码</text></view>
-    </view> 
-  </navigator>
 </view>
