@@ -10,7 +10,7 @@ Page({
       timeout:10000,
       success: (result) => {
         this.setData({
-            token: result.code
+            token: result.token
         })
           
       },
